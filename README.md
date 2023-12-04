@@ -1,6 +1,6 @@
 # wehealth-api
 
-This application is a REST API for WeHealth application. This application is built using Node.js, Express.js, and MongoDB.
+This application is a REST API for pwl application. This application is built using Node.js, Express.js, and Seqeuelize.
 
 ## Installation and Setup Instructions
 
@@ -9,7 +9,7 @@ This application is a REST API for WeHealth application. This application is bui
 1. Git
 2. Node.js
 3. NPM
-4. MongoDB
+4. Seqeuelize
 
 #### Installation
 
@@ -30,4 +30,4 @@ This application is a REST API for WeHealth application. This application is bui
 
 ## Author
 
-- kelompok 4 - skilvul
+- pwl team
