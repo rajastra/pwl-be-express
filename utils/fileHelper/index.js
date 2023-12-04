@@ -9,7 +9,7 @@ const upload = async (fileBuffer, oldPublicId) => {
 
   const options = {
     resource_type: 'image',
-    public_id: `wehealth/images/${Date.now()}`,
+    public_id: `pwlimages/images/${Date.now()}`,
   };
 
   // Delete the old image if a public ID is provided
