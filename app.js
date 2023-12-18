@@ -1,33 +1,33 @@
-const express = require('express');
-const cors = require('cors');
-require('dotenv').config();
+const express = require("express");
+const cors = require("cors");
+require("dotenv").config();
 
 // import utils
-const respond = require('./utils/respond');
-const logger = require('./utils/logger');
+const respond = require("./utils/respond");
+const logger = require("./utils/logger");
 
 // import API Routes
-const setPublicRoutes = require('./routes/public');
-const setPrivateRoutes = require('./routes/private');
+const setPublicRoutes = require("./routes/public");
+const setPrivateRoutes = require("./routes/private");
 
 // database connection
-const sequelize = require('./utils/database');
+const sequelize = require("./utils/database");
 
 const sync = async () =>
   await sequelize.sync({
-    // force: true,
+    force: false,
   });
 sync()
   .then(() => {
-    console.log('Database synced successfully');
+    console.log("Database synced successfully");
   })
   .catch((error) => {
-    console.error('Error syncing database:', error);
+    console.error("Error syncing database:", error);
   });
 
 // app
 const app = express();
-app.use(express.static('public'));
+app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
@@ -38,7 +38,7 @@ setPrivateRoutes(app);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  logger.info('NOT FOUND!');
+  logger.info("NOT FOUND!");
   respond.responseNotFound(res);
 });
 
