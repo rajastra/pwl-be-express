@@ -46,8 +46,6 @@ const deleteOne = async (id) => {
  * @param {Object} file
  */
 const createProduct = async (body, file) => {
-  console.log(file);
-  console.log(body);
   let uploadedFile = await fileHelper.upload(file.buffer);
   body.image = uploadedFile.secure_url;
 

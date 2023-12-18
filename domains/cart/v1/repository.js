@@ -26,7 +26,7 @@ const list = async (params) => {
     const product = data.dataValues;
     return {
       ...product,
-      ...cart.dataValues,
+      ...cart.data,
     };
   });
 
