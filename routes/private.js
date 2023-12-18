@@ -9,7 +9,6 @@ const setPrivateRoutes = (app) => {
   // set routes
   app.use("/api/v1/users", userApiV1);
   app.use("/api/v1/product", productApiV1);
-  // app.use('/api/v1/dokter', dokterPrivateApiV1);
 };
 
 module.exports = setPrivateRoutes;
