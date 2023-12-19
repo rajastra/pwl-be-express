@@ -26,7 +26,9 @@ const list = async (params) => {
     const product = data.dataValues;
     return {
       ...product,
-      ...cart.data,
+      cart_id: cart.id,
+      quantity: cart.quantity,
+      note: cart.note,
     };
   });
 
